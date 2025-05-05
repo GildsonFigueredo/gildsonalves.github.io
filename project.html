@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: gray;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: hwb(33 0% 0%);
+        }
+        input {
+            width: 400px;
+            padding: 5px;
+            text-align: center;
+        }
+        img {
+          
+            width: 200px;
+             height: 200px;
+             border-radius: 50%;
+            border: 5px solid hwb(240 22% 78%);
+        }
+
+    </style>
+</head>
+    <body>
+        <img src="./img/js.jpg">
+        <h1>Primeiro Encontro Síncrono</h1>
+        <div class="container">
+            <button onclick="mostrarAlerta()">Exibir Alert</button>
+            <input type="text" id="alertResult" readonly>
+            
+            <button onclick="mostrarConfirm()">Exibir Confirm</button>
+            <input type="text" id="confirmResult" readonly>
+            
+            <button onclick="mostrarPrompt()">Exibir Prompt</button>
+            <input type="text" id="promptResult" readonly>
+            <h4>Bem-vindo ao primeiro encontro síncrono!</h4>
+        </div>
+       <script type="text/javascript">
+        function mostrarAlerta() {
+            alert("Isso é um alerta!");
+            document.getElementById("alertResult").value = "Alert exibido";
+        }
+
+        function mostrarConfirm() {
+            let resposta = confirm("Você confirma esta ação?");
+            document.getElementById("confirmResult").value = resposta ? "Confirmado" : "Cancelado";
+        }
+
+        function mostrarPrompt() {
+            let resposta = prompt("Digite algo:", "Texto aqui...");
+            document.getElementById("promptResult").value = resposta ? resposta : "Nenhuma entrada";
+        }
+       
+      </script>
+    
+    </body>
+</html>
